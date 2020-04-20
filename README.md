@@ -1,3 +1,5 @@
+⚠️ Under Development. Not ready for use in production just yet. ⚠️
+
 # PayStack for Craft Commerce
 
 This plugin provides [PayStack](https://www.paystack.com/) integrations for [Craft Commerce](https://craftcms.com/commerce).
