@@ -1,0 +1,21 @@
+{% from "_includes/forms" import textField, lightswitchField, selectField, autosuggestField %}
+
+{{ autosuggestField({
+        label: "Secret Key"|t('commerce'),
+        id: 'secretKey',
+        class: 'ltr',
+        name: 'secretKey',
+        suggestEnvVars: true,
+        value: gateway.secretKey,
+        errors: gateway.getErrors('secretKey')
+    }) }}
+
+{{ autosuggestField({
+        label: "Public Key"|t('commerce'),
+        id: 'publicKey',
+        class: 'ltr',
+        name: 'publicKey',
+        suggestEnvVars: true,
+        value: gateway.publicKey,
+        errors: gateway.getErrors('publicKey')
+    }) }}

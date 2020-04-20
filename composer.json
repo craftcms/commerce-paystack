@@ -1,0 +1,46 @@
+{
+  "name": "craftcms/commerce-paystack",
+  "description": "PayStack integration for Craft Commerce 3",
+  "version": "1.0.0",
+  "type": "craft-plugin",
+  "keywords": [
+    "paystack",
+    "commerce",
+    "craftcms",
+    "omnipay",
+    "yii2"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pixel & Tonic",
+      "homepage": "https://pixelandtonic.com/"
+    },
+    {
+      "name": "Paystack",
+      "homepage": "https://paystack.com/"
+    }
+  ],
+  "support": {
+    "email": "support@craftcms.com",
+    "issues": "https://github.com/craftcms/commerce-paystack/issues?state=open",
+    "source": "https://github.com/craftcms/commerce-paystack",
+    "docs": "https://github.com/craftcms/commerce-paystack",
+    "rss": "https://github.com/craftcms/commerce-paystack/commits/master.atom"
+  },
+  "require": {
+    "craftcms/cms": "^3.1.5",
+    "craftcms/commerce": "^3.0",
+    "craftcms/commerce-omnipay": "^2.0.0",
+    "paystackhq/omnipay-paystack": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "craft\\commerce\\paystack\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "PayStack for Craft Commerce",
+    "handle": "commerce-paystack"
+  }
+}
