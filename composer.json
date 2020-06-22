@@ -29,7 +29,7 @@
     "rss": "https://github.com/craftcms/commerce-paystack/commits/master.atom"
   },
   "require": {
-    "craftcms/cms": "^3.1.5",
+    "craftcms/cms": "^3.4",
     "craftcms/commerce": "^3.1",
     "craftcms/commerce-omnipay": "^2.0.0",
     "paystackhq/omnipay-paystack": "^1.0"
