@@ -8,7 +8,7 @@ This plugin provides a [Paystack](https://paystack.com/) integration for [Craft 
 
 This plugin requires Craft 3.4 and Craft Commerce 3.1 or later.
 
-This plugin uses [`Paystack Onmnipay`](https://packagist.org/packages/paystackhq/omnipay-paystack) PHP package.
+This plugin uses [`paystackhq/omnipay-paystack`](https://packagist.org/packages/paystackhq/omnipay-paystack) PHP package.
 
 ## Installation
 
