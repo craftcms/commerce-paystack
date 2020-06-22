@@ -32,3 +32,7 @@ composer require craftcms/commerce-paystack
 # tell Craft to install the plugin
 ./craft install/plugin commerce-paystack
 ```
+
+## Roadmap
+
+- [ ] Add support for refunding from the CP. Requires refund notification support in the Paystack API.
