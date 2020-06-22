@@ -4,17 +4,16 @@ namespace craft\commerce\paystack\gateways;
 
 use Craft;
 use craft\commerce\base\RequestResponseInterface;
-use craft\commerce\elements\Order;
-use craft\commerce\errors\PaymentException;
 use craft\commerce\models\payments\BasePaymentForm;
 use craft\commerce\models\Transaction;
 use craft\commerce\omnipay\base\OffsiteGateway;
 use craft\commerce\paystack\models\PaymentForm;
 use craft\commerce\paystack\web\assets\paystack\PayStackBundle;
+use craft\helpers\Json;
+use craft\web\Response;
+use craft\web\Response as WebResponse;
 use craft\web\View;
 use Omnipay\Common\AbstractGateway;
-use Omnipay\Common\Message\RequestInterface;
-use Omnipay\Omnipay;
 use Omnipay\Paystack\Gateway;
 
 /**
@@ -55,6 +54,32 @@ class PayStack extends OffsiteGateway
     public function getSettingsHtml()
     {
         return Craft::$app->getView()->renderTemplate('commerce-paystack/gatewaySettings', ['gateway' => $this]);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function processWebHook(): WebResponse
+    {
+        $rawData = Craft::$app->getRequest()->getRawBody();
+        $response = Craft::$app->getResponse();
+        $response->format = Response::FORMAT_RAW;
+
+        $data = Json::decodeIfJson($rawData);
+
+        if ($data) {
+            try {
+
+            } catch (\Throwable $exception) {
+                Craft::$app->getErrorHandler()->logException($exception);
+            }
+        } else {
+            Craft::warning('Could not decode JSON payload.', 'stripe');
+        }
+
+        $response->data = 'ok';
+
+        return $response;
     }
 
     /**

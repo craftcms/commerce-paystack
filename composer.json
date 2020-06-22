@@ -1,7 +1,7 @@
 {
   "name": "craftcms/commerce-paystack",
   "description": "PayStack integration for Craft Commerce 3",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.1",
   "type": "craft-plugin",
   "keywords": [
     "paystack",
@@ -30,9 +30,9 @@
   },
   "require": {
     "craftcms/cms": "^3.1.5",
-    "craftcms/commerce": "^3.0",
+    "craftcms/commerce": "^3.1",
     "craftcms/commerce-omnipay": "^2.0.0",
-    "paystackhq/omnipay-paystack": "*"
+    "paystackhq/omnipay-paystack": "^1.0"
   },
   "autoload": {
     "psr-4": {
