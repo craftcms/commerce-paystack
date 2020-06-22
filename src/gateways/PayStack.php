@@ -149,6 +149,14 @@ class PayStack extends OffsiteGateway
     /**
      * @inheritDoc
      */
+    public function supportsRefund(): bool
+    {
+        return false;
+    }
+    
+    /**
+     * @inheritDoc
+     */
     public function supportsCompletePurchase(): bool
     {
         return true;
