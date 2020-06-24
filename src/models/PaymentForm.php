@@ -8,7 +8,7 @@ use craft\commerce\models\PaymentSource;
 use yii\base\NotSupportedException;
 
 /**
- * PayStack payment form model.
+ * Paystack payment form model.
  *
  * @author Pixel & Tonic, Inc. <support@pixelandtonic.com>
  * @since  1.0

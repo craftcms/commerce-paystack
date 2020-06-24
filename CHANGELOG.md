@@ -1,4 +1,4 @@
-# Release Notes for PayStack for Craft Commerce
+# Release Notes for Paystack for Craft Commerce
 
 ## 1.0.0 - 2020-06-22
 
