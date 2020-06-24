@@ -8,7 +8,7 @@ use craft\commerce\models\payments\BasePaymentForm;
 use craft\commerce\models\Transaction;
 use craft\commerce\omnipay\base\OffsiteGateway;
 use craft\commerce\paystack\models\PaymentForm;
-use craft\commerce\paystack\web\assets\paystack\PayStackBundle;
+use craft\commerce\paystack\web\assets\paystack\PaystackBundle;
 use craft\helpers\Json;
 use craft\web\Response;
 use craft\web\Response as WebResponse;
@@ -17,12 +17,12 @@ use Omnipay\Common\AbstractGateway;
 use Omnipay\Paystack\Gateway;
 
 /**
- * PayStack represents the PayStack gateway
+ * Paystack represents the Paystack gateway
  *
  * @author    Pixel & Tonic, Inc. <support@pixelandtonic.com>
  * @since     1.0
  */
-class PayStack extends OffsiteGateway
+class Paystack extends OffsiteGateway
 {
     // Properties
     // =========================================================================
@@ -45,7 +45,7 @@ class PayStack extends OffsiteGateway
      */
     public static function displayName(): string
     {
-        return Craft::t('commerce', 'PayStack');
+        return Craft::t('commerce', 'Paystack');
     }
 
     /**
@@ -99,7 +99,7 @@ class PayStack extends OffsiteGateway
         $view->setTemplateMode(View::TEMPLATE_MODE_CP);
 
         $view->registerJsFile('https://js.paystack.co/v2/paystack.js');
-        $view->registerAssetBundle(PayStackBundle::class);
+        $view->registerAssetBundle(PaystackBundle::class);
 
         $html = Craft::$app->getView()->renderTemplate('commerce-paystack/paymentForm', $params);
         $view->setTemplateMode($previousMode);
@@ -153,7 +153,7 @@ class PayStack extends OffsiteGateway
     {
         return false;
     }
-    
+
     /**
      * @inheritDoc
      */

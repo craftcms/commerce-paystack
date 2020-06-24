@@ -4,9 +4,9 @@ namespace craft\commerce\paystack\web\assets\paystack;
 use craft\web\AssetBundle;
 
 /**
- * Asset bundle for the PayStack payment
+ * Asset bundle for the Paystack payment
  */
-class PayStackBundle extends AssetBundle
+class PaystackBundle extends AssetBundle
 {
     /**
      * @inheritdoc

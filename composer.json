@@ -1,6 +1,6 @@
 {
   "name": "craftcms/commerce-paystack",
-  "description": "PayStack integration for Craft Commerce 3",
+  "description": "Paystack integration for Craft Commerce 3",
   "version": "1.0.0",
   "type": "craft-plugin",
   "keywords": [
@@ -40,7 +40,7 @@
     }
   },
   "extra": {
-    "name": "PayStack for Craft Commerce",
+    "name": "Paystack for Craft Commerce",
     "handle": "commerce-paystack"
   }
 }
