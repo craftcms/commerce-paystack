@@ -1,9 +1,10 @@
 # Release Notes for Paystack for Craft Commerce
 
-## 3.0.0 Unreleased
+## 2.0.0
 
 ### Changed
-- Paystack for Craft Commerce now requires Craft Commerce 3.3 or later.
+- The plugin now requires Craft 3.6 and Commerce 3.3 or later.
+- The plugin now requires Guzzle 7.
 
 ## 1.0.0 - 2020-06-24
 
