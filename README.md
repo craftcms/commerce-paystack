@@ -6,7 +6,7 @@ This plugin provides a [Paystack](https://paystack.com/) integration for [Craft 
 
 ## Requirements
 
-This plugin requires Craft 3.4 and Craft Commerce 3.1 or later.
+This plugin requires Craft 3.6 and Craft Commerce 3.3 or later.
 
 ## Installation
 
