@@ -20,9 +20,6 @@ use craft\helpers\Json;
  */
 class Install extends Migration
 {
-    // Public Methods
-    // =========================================================================
-
     /**
      * @inheritdoc
      */

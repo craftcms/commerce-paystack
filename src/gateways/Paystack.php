@@ -24,9 +24,6 @@ use Omnipay\Paystack\Gateway;
  */
 class Paystack extends OffsiteGateway
 {
-    // Properties
-    // =========================================================================
-
     /**
      * @var string
      */
@@ -36,9 +33,6 @@ class Paystack extends OffsiteGateway
      * @var string
      */
     public $publicKey;
-
-    // Public Methods
-    // =========================================================================
 
     /**
      * @inheritdoc
@@ -169,9 +163,6 @@ class Paystack extends OffsiteGateway
     {
         return true;
     }
-
-    // Protected Methods
-    // =========================================================================
 
     /**
      * @inheritdoc
