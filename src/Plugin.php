@@ -1,34 +1,19 @@
 <?php
 
-namespace craft\commerce\paystack;
+declare(strict_types=1);
 
-use craft\commerce\paystack\gateways\Paystack;
-use craft\commerce\services\Gateways;
-use craft\events\RegisterComponentTypesEvent;
-use yii\base\Event;
+namespace CraftCms\CommercePaystack;
 
+use CraftCms\Cms\Plugin\Plugin as BasePlugin;
+use CraftCms\Commerce\Payment\Gateway\GatewayTypes;
 
 /**
- * Plugin represents the Paystack integration plugin.
- *
- * @author Pixel & Tonic, Inc. <support@pixelandtonic.com>
- * @since  1.0
+ * Paystack for Craft Commerce.
  */
-class Plugin extends \craft\base\Plugin
+class Plugin extends BasePlugin
 {
-    /**
-     * @inheritdoc
-     */
-    public function init()
+    public function boot(GatewayTypes $gatewayTypes): void
     {
-        parent::init();
-
-        Event::on(
-            Gateways::class,
-            Gateways::EVENT_REGISTER_GATEWAY_TYPES,
-            function(RegisterComponentTypesEvent $event) {
-                $event->types[] = Paystack::class;
-            }
-        );
+        $gatewayTypes->register(Gateway::class);
     }
 }
